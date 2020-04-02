@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './components/Nav';
 import LoginForm from './components/LoginForm';
 import SignupForm from './components/SignupForm';
+import TestComponent from './components/Testpage';
 import './App.css';
 
 class App extends Component {
@@ -99,13 +100,23 @@ class App extends Component {
           display_form={this.display_form}
           handle_logout={this.handle_logout}
         />
+
         {form}
-        <h3>
+{/*        <h3>
           {this.state.logged_in
             ? `Hello, ${this.state.username}`
             : 'Please Log In'}
-        </h3>
-      </div>
+        </h3> 
+          */}
+
+          <h3>
+          {this.state.logged_in
+            ? <TestComponent />
+            : 'Please Log In'}
+        </h3> 
+
+
+        </div>
     );
   }
 }
